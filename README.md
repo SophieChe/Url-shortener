@@ -34,7 +34,7 @@
 
 ### 6. API (`UrlController`)
 - `POST /api/v1/short` → Принимает длинный URL и возвращает короткий.
-- `GET /api/v1/origin/{hash}` → Возвращает оригинальный URL по короткой ссылке.
+- `GET /api/v1/{hash}` → Перенаправляет пользователя на оригинальный URL, связанный с хэшем hash. Возвращает HTTP 302 с заголовком Location.
 - Требуется заголовок `x-user-id` для идентификации пользователя.
 
 ---
@@ -80,7 +80,7 @@ A high-performance URL shortening service that converts long URLs into short, sh
 
 ### 6. API (`UrlController`)
 - `POST /api/v1/short` → Accepts a long URL and returns a short URL.
-- `GET /api/v1/origin/{hash}` → Returns the original URL by its short code.
+- `GET /api/v1/{hash}` → Redirects the user to the original URL associated with the hash. Returns HTTP 302 with a Location header.
 - Requires `x-user-id` header for user identification.
 
 ---
